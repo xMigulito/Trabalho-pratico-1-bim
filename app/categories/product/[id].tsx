@@ -5,11 +5,8 @@ import {
   StyleSheet,
   Image,
   ScrollView,
-  Dimensions,
 } from "react-native";
 import { data } from "../../../data/index";
-
-const { width } = Dimensions.get("window");
 
 export default function ProductDetails() {
   const { id } = useLocalSearchParams();
@@ -27,7 +24,9 @@ export default function ProductDetails() {
 
   return (
     <ScrollView style={styles.container}>
-      <Image source={{ uri: product.image }} style={styles.productImage} />
+      <View style={styles.imageContainer}>
+        <Image source={{ uri: product.image }} style={styles.productImage} />
+      </View>
       <View style={styles.contentContainer}>
         <Text style={styles.category}>{category?.title.toUpperCase()}</Text>
         <Text style={styles.title}>{product.title}</Text>
@@ -47,19 +46,26 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#000",
   },
+  imageContainer: {
+    alignItems: "center", 
+    justifyContent: "center", 
+    marginVertical: 20, 
+  },
   productImage: {
-    width: width,
-    height: width,
+    width: 300,
+    height: 300,
     resizeMode: "cover",
   },
   contentContainer: {
     padding: 20,
+    alignItems: "center", 
   },
   category: {
     fontSize: 14,
     color: "#B4916C",
     letterSpacing: 2,
     marginBottom: 8,
+    textAlign: "center", 
   },
   title: {
     fontSize: 24,
@@ -67,17 +73,20 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 12,
     letterSpacing: 1,
+    textAlign: "center", 
   },
   price: {
     fontSize: 20,
     color: "#B4916C",
     fontWeight: "600",
     marginBottom: 24,
+    textAlign: "center",
   },
   separator: {
     height: 1,
     backgroundColor: "#333",
     marginVertical: 24,
+    width: "80%",
   },
   descriptionTitle: {
     fontSize: 14,
@@ -85,12 +94,14 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
     marginBottom: 12,
     fontWeight: "500",
+    textAlign: "center",
   },
   description: {
     fontSize: 16,
     color: "#999",
     lineHeight: 24,
     letterSpacing: 0.5,
+    textAlign: "center",
   },
   errorText: {
     fontSize: 16,

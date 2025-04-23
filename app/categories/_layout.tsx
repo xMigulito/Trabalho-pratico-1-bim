@@ -2,7 +2,15 @@ import { Stack } from "expo-router";
 
 export default function CategoriesLayout() {
   return (
-    <Stack>
+    <Stack screenOptions={{ 
+      headerStyle: {
+        backgroundColor: '#000',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      }
+    }}>
       <Stack.Screen
         name="index"
         options={{

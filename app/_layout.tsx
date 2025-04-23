@@ -1,11 +1,16 @@
 import { Tabs } from "expo-router";
-import React, { Component } from "react";
-import { Text, View } from "react-native";
+import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function Layout() {
   return (
-    <Tabs screenOptions={{ headerShown: false }}>
+    <Tabs screenOptions={{
+      tabBarActiveTintColor: "#e91e63",
+      tabBarInactiveTintColor: "gray",
+      tabBarLabelStyle: { fontSize: 12 },
+      tabBarStyle: { backgroundColor: "#000" }, 
+      headerShown: false 
+    }}>
       <Tabs.Screen
         name="index"
         options={{
