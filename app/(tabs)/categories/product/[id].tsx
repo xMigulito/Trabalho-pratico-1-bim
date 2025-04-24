@@ -6,7 +6,7 @@ import {
   Image,
   ScrollView,
 } from "react-native";
-import { data } from "../../../data/index";
+import { data } from "../../../../data/index";
 
 export default function ProductDetails() {
   const { id } = useLocalSearchParams();

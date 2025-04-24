@@ -10,8 +10,8 @@ import {
   ScrollView,
 } from "react-native";
 import { router } from "expo-router";
-import { data } from "../data/index";
-import { Product } from "../types/product";
+import { data } from "../../data/index";
+import { Product } from "../../types/product";
 import { LinearGradient } from "expo-linear-gradient";
 
 const { width } = Dimensions.get("window");
@@ -25,7 +25,7 @@ export default function Index() {
   const randomProducts = getRandomProducts(6);
 
   const handleProductPress = (productId: number) => {
-    router.push(`/categories/product/${productId}`);
+    router.push(`/product/${productId}`);
   };
 
   const handleSeeAllProducts = () => {

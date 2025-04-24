@@ -7,7 +7,7 @@ export default function AboutMe() {
     <ScrollView style={styles.container}>
       <View style={styles.headerContainer}>
         <Image
-          source={require('../assets/images/profile.jpg')}
+          source={require('../../assets/images/profile.jpg')}
           style={styles.profileImage}
         />
         <Text style={styles.name}>Miguel do Nascimento Moreno Fernandes</Text>

@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
-import { data } from "../../data/index";
+import { data } from "../../../data/index";
 import { LinearGradient } from "expo-linear-gradient";
 
 const { width } = Dimensions.get("window");
